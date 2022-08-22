@@ -1,18 +1,29 @@
 <template>
   <div id="app">
-
+    <h1>Todo application</h1>
+    <TodoList 
+      v-bind:todos="todos" 
+    />  
   </div>
 </template>
 
 <script>
-
+import TodoList from '@/components/TodoList'
 export default {
   name: 'App',
+  data () {
+    return {
+      todos: [
+            {id:1, title:'Купить хлеб', completed: false},
+            {id:2, title:'Купить молоко', completed: false},
+            {id:3, title:'Купить картошку', completed: false}
+      ]
+    }
+  },
   components: {
-    
+    TodoList
   }
 }
-const newLocal = <img alt={"\u0056\u0075\u0065\u0020\u006c\u006f\u0067\u006f"} src={"\u002e\u002f\u0061\u0073\u0073\u0065\u0074\u0073\u002f\u006c\u006f\u0067\u006f\u002e\u0070\u006e\u0067"}></img>;
 </script>
 
 <style>
