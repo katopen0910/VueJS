@@ -2,8 +2,8 @@
     <div>
         <ul>
             <TodoItem 
-                v-for="todo of todos"
-                v-bind:todo="todo" 
+                valid-v-for="todo of todos"
+                v-bind:todo="todo"
             />
         </ul>
     </div>
@@ -25,4 +25,5 @@ ul{
     margin: 0;
     padding: 0;
 }
-</style>
+</style>             
+              
